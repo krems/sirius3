@@ -1,4 +1,4 @@
-package com.sirius;
+package com.sirius.resource;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -64,7 +64,7 @@ public class ResourceDemo {
             System.out.println(scanner.nextLine());
         }
         
-        final URL resourceInPackage = Thread.currentThread().getContextClassLoader().getResource("com/sirius/in_package.txt");
+        final URL resourceInPackage = Thread.currentThread().getContextClassLoader().getResource("com/sirius/resource/in_package.txt");
         final Scanner otherScanner = new Scanner(new BufferedInputStream(resourceInPackage.openStream()));
         while (otherScanner.hasNext()) {
             System.out.println(otherScanner.nextLine());
@@ -94,7 +94,7 @@ public class ResourceDemo {
             System.out.println(scanner.nextLine());
         }
         
-        final URL resourceInPackage = Thread.currentThread().getContextClassLoader().getResource("com/sirius/in_package.txt");
+        final URL resourceInPackage = Thread.currentThread().getContextClassLoader().getResource("com/sirius/resource/in_package.txt");
         final Scanner otherScanner = new Scanner(new BufferedInputStream(resourceInPackage.openStream()));
         while (otherScanner.hasNext()) {
             System.out.println(otherScanner.nextLine());
